@@ -1,0 +1,57 @@
+<section class="payment-section">
+  <h1>Payment Details</h1>
+ 
+  <form (ngSubmit)="onSubmit()">
+    <!-- Select Payment Method -->
+    <label for="payment-method">Choose a Payment Method:</label>
+    <select id="payment-method" [(ngModel)]="selectedMethod" name="payment-method" required>
+      <option value="" disabled>Select Payment Method</option>
+      <option value="credit-card">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="google-pay">Google Pay</option>
+    </select>
+ 
+    <!-- Credit Card Payment Form -->
+    <div *ngIf="selectedMethod === 'credit-card'" class="credit-card-payment">
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card-number" [(ngModel)]="creditCard.cardNumber" placeholder="Enter card number" required>
+ 
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="month" id="expiry-date" name="expiry-date" [(ngModel)]="creditCard.expiryDate" required>
+ 
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" [(ngModel)]="creditCard.cvv" placeholder="Enter CVV" required>
+    </div>
+ 
+    <!-- PayPal Payment Form -->
+    <div *ngIf="selectedMethod === 'paypal'" class="paypal-payment">
+      <label for="paypal-email">PayPal Email:</label>
+      <input type="email" id="paypal-email" name="paypal-email" [(ngModel)]="paypal.email" placeholder="Enter your PayPal email" required>
+    </div>
+ 
+    <!-- Google Pay Payment Form -->
+    <div *ngIf="selectedMethod === 'google-pay'" class="google-pay-payment">
+      <label for="google-pay-email">Google Pay Email:</label>
+      <input type="email" id="google-pay-email" name="google-pay-email" [(ngModel)]="googlePay.email" placeholder="Enter your Google Pay email" required>
+    </div>
+ 
+    <!-- Submit Button -->
+    <div *ngIf="!isPaymentConfirmed">
+      <!-- Display Payment Confirmation -->
+      <button (click)="onPaymentButtonClick()">Confirm Payment of {{ amount }} USD</button>
+    </div>
+ 
+    <div *ngIf="isPaymentConfirmed && !isPinEntered">
+      <!-- Enter PIN Form -->
+      <input [(ngModel)]="pin" name="pin" type="password" placeholder="Enter PIN" />
+      <button (click)="onPinSubmit()">Submit PIN</button>
+    </div>
+ 
+    <div *ngIf="isPinEntered">
+      <!-- Congratulatory Message -->
+      <h1>Congratulations! Your payment of {{ amount }} USD was successful.</h1>
+    </div>
+ 
+   
+  </form>
+</section>

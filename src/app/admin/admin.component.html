@@ -1,0 +1,48 @@
+
+<nav>
+    <h2>Add Flight – Admin</h2>
+  </nav>
+  
+  <form [formGroup]="flightForm" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <label for="flightNumber">Flight Number:</label>
+      <input id="flightNumber" formControlName="flightNumber" required>
+    </div>
+  
+    <div>
+      <label for="from">From:</label>
+      <input id="from" formControlName="from" required>
+    </div>
+  
+    <div>
+      <label for="to">To:</label>
+      <input id="to" formControlName="to" required>
+    </div>
+  
+    <div>
+      <label for="depart">Depart:</label>
+      <input id="depart" formControlName="depart" type="datetime-local" required>
+    </div>
+  
+    <div>
+      <label for="arrive">Arrive:</label>
+      <input id="arrive" formControlName="arrive" type="datetime-local" required>
+    </div>
+  
+    <div>
+      <label for="duration">Duration:</label>
+      <input id="duration" formControlName="duration" required>
+    </div>
+  
+    <div>
+      <label for="cabin">Cabin:</label>
+      <input id="cabin" formControlName="cabin" required>
+    </div>
+  
+    <button type="submit" [disabled]="flightForm.invalid" (click)="navigate()">ADD</button>
+  </form>
+  
+  <footer>
+    
+  </footer>
+  

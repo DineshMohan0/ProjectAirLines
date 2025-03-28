@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "123456",
+      "phoneNumber": "1234567890",
+      "dob": "1990-01-01"
+    },
+    {
+      "id": "0",
+      "firstName": "THIRUMOORTHI",
+      "lastName": "N",
+      "email": "dinesh@gmail.com",
+      "password": "Dinesh123",
+      "confirmPassword": "Dinesh123",
+      "phoneNumber": "9443381917",
+      "dob": "2025-01-08"
+    },
+    {
+      "id": "0",
+      "firstName": "Shri",
+      "lastName": "N",
+      "email": "shri@gmail.com",
+      "password": "Shri123",
+      "confirmPassword": "Shri123",
+      "phoneNumber": "9443381917",
+      "dob": "2025-01-02"
+    },
+    {
+      "id": 0,
+      "firstName": "hello",
+      "lastName": "H",
+      "email": "hello@123",
+      "password": "Hello123",
+      "confirmPassword": "Hello123",
+      "phoneNumber": "02345678912",
+      "dob": "2025-01-14"
+    },
+    {
+      "id": 0,
+      "firstName": "thilaka",
+      "lastName": "R",
+      "email": "thilaka@gmail.com",
+      "password": "Thilaka123",
+      "confirmPassword": "Thilaka123",
+      "phoneNumber": "02345678912",
+      "dob": "2025-01-15"
+    }
+  ],
+  "flights": []
+}

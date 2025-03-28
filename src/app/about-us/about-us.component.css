@@ -1,0 +1,97 @@
+body {
+    font-family: 'Georgia', serif;
+    background: #45aae9 !important; /* White background for a clean look */
+    color: #0A2A6E; /* Deep blue for text to keep it luxurious */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .about-us-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #45aae9; /* White background for elegance */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .about-us-page .title {
+    text-align: center;
+    color: #0A2A6E; /* Elegant blue color for the title */
+    margin-bottom: 40px;
+    font-size: 3.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .history-section, .mission-values-section, .team-section {
+    margin-bottom: 60px;
+  }
+  
+  .history-section h2, .mission-values-section h2, .team-section h2 {
+    color: #0A2A6E; /* Deep blue for section titles */
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #0A2A6E; /* Thick bottom border for emphasis */
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .values-list, .team-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .values-list li, .team-list li {
+    margin-bottom: 20px;
+    background: #F0F4FF; /* Light blue gradient background for a soft touch */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for a luxurious look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .values-list li:hover, .team-list li:hover {
+    transform: translateY(-8px); /* Slight elevation effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover effect */
+  }
+  
+  .values-list strong, .team-list strong {
+    color: #0A2A6E; /* Blue color for emphasis */
+    font-weight: 700;
+  }
+  
+  p {
+    line-height: 1.8;
+    margin: 18px 0;
+    font-size: 1.2em;
+  }
+  
+  ul {
+    padding-left: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-page {
+      margin: 20px;
+      padding: 25px;
+    }
+  
+    .about-us-page .title {
+      font-size: 2.5em;
+    }
+  
+    .history-section h2, .mission-values-section h2, .team-section h2 {
+      font-size: 1.8em;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

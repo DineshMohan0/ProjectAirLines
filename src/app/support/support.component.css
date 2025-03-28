@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://wallpaperbat.com/img/563899-flight-wallpaper.jpg') no-repeat center center;
+    
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .support-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #45aae9;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .support-page .title {
+    text-align: center;
+    color: #063cff;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .faq-section, .contact-section, .resources-section {
+    margin-bottom: 30px;
+  }
+  
+  .faq-section h2, .contact-section h2, .resources-section h2 {
+    color: #063cff;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #063cff;
+    padding-bottom: 10px;
+  }
+  
+  .faq-list, .contact-info, .resources-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq-list li, .contact-info li, .resources-list li {
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #f0f4ff, #e0f0ff);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faq-list li:hover, .contact-info li:hover, .resources-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-list strong {
+    color: #063cff;
+  }
+  
+  .contact-info li a, .resources-list li a {
+    color: #063cff;
+    text-decoration: none;
+  }
+  
+  .contact-info li a:hover, .resources-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .support-page {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .support-page .title {
+      font-size: 2em;
+    }
+  
+    .faq-section h2, .contact-section h2, .resources-section h2 {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

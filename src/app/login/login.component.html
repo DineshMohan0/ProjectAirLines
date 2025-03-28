@@ -1,0 +1,40 @@
+<!-- <div class="container w-50 p-5">
+    <h1 class="text-center pb-4">User Login</h1>
+    <form #isFormValid="ngForm" [formGroup]="loginFormGroup" class="form-group">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Enter Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" formControlName="password" id="password" placeholder="Enter Password" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="adminCheck" formControlName="isAdmin">
+            <label class="form-check-label" for="adminCheck">Admin Login</label>
+        </div>
+        <button (click)="login()" class="form-control btn btn-dark" [disabled]="!isFormValid.valid">Login</button>
+    </form>
+</div> -->
+
+
+<div class="wrapper">
+    <div class="container form-container w-50 p-5">
+        <h1 class="text-center pb-4">User Login</h1>
+        <form #isFormValid="ngForm" [formGroup]="loginFormGroup" class="form-group">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" formControlName="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="adminCheck" formControlName="isAdmin">
+                <label class="form-check-label" for="adminCheck">Admin Login</label>
+            </div>
+            <button (click)="login()" class="form-control btn btn-dark" [disabled]="!isFormValid.valid">Login</button>
+        </form>
+    </div>
+<div>

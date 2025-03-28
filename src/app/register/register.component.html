@@ -1,0 +1,171 @@
+<!-- 
+   <form #isFormValid="ngForm" [formGroup]="registrationFormGroup" class="form-group">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" name="firstName" formControlName="firstName" id="firstName" placeholder="Enter First Name" required>
+      <div *ngIf="registrationFormGroup.controls['firstName']?.touched && registrationFormGroup.controls['firstName']?.invalid">
+        <small class="text-danger" *ngIf="registrationFormGroup.controls['firstName']?.errors?.['required']">First Name is required</small>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" name="lastName" formControlName="lastName" id="lastName" placeholder="Enter Last Name" required>
+      <div *ngIf="registrationFormGroup.controls['lastName']?.touched && registrationFormGroup.controls['lastName']?.invalid">
+        <small class="text-danger" *ngIf="registrationFormGroup.controls['lastName']?.errors?.['required']">Last Name is required</small>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Enter Email" required>
+      <div *ngIf="registrationFormGroup.controls['email']?.touched && registrationFormGroup.controls['email']?.invalid">
+        <small class="text-danger" *ngIf="registrationFormGroup.controls['email']?.errors?.['required']">Email is required</small>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" formControlName="password" id="password" placeholder="Enter Password" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" name="confirmPassword" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="phoneNumber" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="dob" class="form-label">Date of Birth</label>
+      <input type="date" class="form-control" name="dob" formControlName="dob" id="dob" required>
+    </div>
+  
+    <button *ngIf="!addOrPut" (click)="registerUser()" class="form-control btn btn-dark" [disabled]="!isFormValid.valid">Register</button>
+
+   
+  <button (click)="navigateToLogin()" type="button" class="form-control btn btn-link mt-3">Already have an account? Login</button>
+
+  </form>
+   ---------------------------------------------------------------------------------------------------------------
+   <div class="wrapper">
+    <div class="container">
+   <div class="container form-container">
+    <h1 class="text-center">Create Your Account</h1>
+    <form #isFormValid="ngForm" [formGroup]="registrationFormGroup" class="form-group">
+      
+      <div class="input-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" name="firstName" formControlName="firstName" id="firstName" placeholder="Enter First Name" required>
+        <div *ngIf="registrationFormGroup.controls['firstName']?.touched && registrationFormGroup.controls['firstName']?.invalid">
+          <small class="text-danger" *ngIf="registrationFormGroup.controls['firstName']?.errors?.['required']">First Name is required</small>
+        </div>
+      </div>
+  
+      <div class="input-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="lastName" formControlName="lastName" id="lastName" placeholder="Enter Last Name" required>
+        <div *ngIf="registrationFormGroup.controls['lastName']?.touched && registrationFormGroup.controls['lastName']?.invalid">
+          <small class="text-danger" *ngIf="registrationFormGroup.controls['lastName']?.errors?.['required']">Last Name is required</small>
+        </div>
+      </div>
+  
+      <div class="input-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Enter Email" required>
+        <div *ngIf="registrationFormGroup.controls['email']?.touched && registrationFormGroup.controls['email']?.invalid">
+          <small class="text-danger" *ngIf="registrationFormGroup.controls['email']?.errors?.['required']">Email is required</small>
+        </div>
+      </div>
+  
+      <div class="input-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" formControlName="password" id="password" placeholder="Enter Password" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" name="confirmPassword" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" name="dob" formControlName="dob" id="dob" required>
+      </div>
+    
+      <button (click)="navigateToLogin()" type="button" class="form-control btn btn-link login-btn mt-3">Already have an account? Login</button>
+  
+    </form>
+  </div>
+</div>
+</div> -->
+  
+  
+
+   <div class="wrapper">
+    <div class="container">
+     <div class="container form-container">
+      <h1 class="text-center">Create Your Account</h1>
+      <form #isFormValid="ngForm" [formGroup]="registrationFormGroup" (ngSubmit)="registerUser()" class="form-group">
+       
+        <div class="input-group">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" name="firstName" formControlName="firstName" id="firstName" placeholder="Enter First Name" required>
+          <div *ngIf="registrationFormGroup.controls['firstName']?.touched && registrationFormGroup.controls['firstName']?.invalid">
+            <small class="text-danger" *ngIf="registrationFormGroup.controls['firstName']?.errors?.['required']">First Name is required</small>
+          </div>
+        </div>
+   
+        <div class="input-group">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" name="lastName" formControlName="lastName" id="lastName" placeholder="Enter Last Name" required>
+          <div *ngIf="registrationFormGroup.controls['lastName']?.touched && registrationFormGroup.controls['lastName']?.invalid">
+            <small class="text-danger" *ngIf="registrationFormGroup.controls['lastName']?.errors?.['required']">Last Name is required</small>
+          </div>
+        </div>
+   
+        <div class="input-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" formControlName="email" id="email" placeholder="Enter Email" required>
+          <div *ngIf="registrationFormGroup.controls['email']?.touched && registrationFormGroup.controls['email']?.invalid">
+            <small class="text-danger" *ngIf="registrationFormGroup.controls['email']?.errors?.['required']">Email is required</small>
+          </div>
+        </div>
+   
+        <div class="input-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" formControlName="password" id="password" placeholder="Enter Password" required>
+        </div>
+   
+        <div class="input-group">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" name="confirmPassword" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+   
+        <div class="input-group">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" name="phoneNumber" formControlName="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" required>
+        </div>
+   
+        <div class="input-group">
+          <label for="dob" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" name="dob" formControlName="dob" id="dob" required>
+        </div>
+     
+        <button type="submit" class="form-control btn btn-link login-btn mt-3">SignUp</button>
+
+        <a [routerLink]="'/login'">Already have an account? Login</a>
+   
+      </form>
+    </div>
+  </div>
+  </div>
+  

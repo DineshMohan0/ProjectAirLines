@@ -1,0 +1,116 @@
+<header class="bg-white shadow">
+  <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-blue-700">ThaiAir</h1>
+      <p class="ml-4 text-sm text-gray-600">Fly with us to your next destination</p>
+    </div>
+    <div class="space-x-6 text-gray-600">
+      <a href="about" class="hover:text-blue-700">About us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="home" class="hover:text-blue-700">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" class="hover:text-blue-700">Manage Flights</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="support" class="hover:text-blue-700">Support</a>
+    </div>
+    <div class="flex space-x-4 items-center">
+      <button (click)="navigateToLogin()" type="button" class="form-control btn btn-link login-btn mt-3">Login</button>
+      <button (click)="navigateToreg()" type="button" class="form-control btn btn-link login-btn mt-3">Register</button>
+      <!-- <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800" (click)="login()">Login</button>
+      <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Signup</button> -->
+    </div>
+  </nav>
+</header>
+  <div id="center">
+  <div class="card">
+    <h2 class="title">Seat Selection</h2>
+    <p class="flight-info">
+      <strong>From:</strong> {{ flightDetails.from }}<br>
+      <strong>To:</strong> {{ flightDetails.to }}<br>
+      <strong>Date:</strong> {{ flightDetails.date }}<br>
+      <strong>Price:</strong> {{ flightDetails.price }}
+    </p>
+  
+    <h3 class="seat-title">Choose Your Seat</h3>
+    <!-- Example seat layout -->
+    <div class="seat-grid">
+      <button class="seat">1A</button>
+      <button class="seat">1B</button>
+      <button class="seat">1C</button>
+      <button class="seat">1D</button>
+      <button class="seat">2A</button>
+      <button class="seat">2B</button>
+      <button class="seat">2C</button>
+      <button class="seat">2D</button>
+      <button class="seat">3A</button>
+      <button class="seat">3B</button>
+      <button class="seat">3C</button>
+      <button class="seat">3D</button>
+      
+      <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+        <button (click)="paynow()" style="background-color: #007BFF; color: white; border: none; padding: 12px 30px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pay Now</button>
+      </div>
+      
+      <!-- Add more seats as needed -->
+    </div>
+  </div>
+</div>
+
+  <footer class="bg-gray-100 border-t py-4"> <!-- Reduced padding for minimal space -->
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-4 gap-4 text-sm text-gray-600"> <!-- Adjusted grid gap for compactness -->
+            <div>
+                <h5 class="font-semibold text-blue-700">Customer Service</h5>
+                <ul>
+                    <li><a href="#" class="hover:text-blue-700">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-700">FAQ</a></li>
+                    <li><a href="#" class="hover:text-blue-700">Booking Help</a></li>
+                    <li><a href="#" class="hover:text-blue-700">Refunds</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold text-blue-700">Company</h5>
+                <ul>
+                    <li><a href="#" class="hover:text-blue-700">About ThaiAir</a></li>
+                    <li><a href="#" class="hover:text-blue-700">Careers</a></li>
+                    <li><a href="#" class="hover:text-blue-700">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-700">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold text-blue-700">Follow Us</h5>
+                <div class="flex space-x-2"> <!-- Reduced space between items -->
+                    <a href="#" class="text-gray-600 hover:text-blue-700">Facebook</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700">Twitter</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700">Instagram</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700">LinkedIn</a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-semibold text-blue-700">Download Our App</h5>
+                <a href="#" class="text-blue-700 hover:text-blue-800">Get it on Google Play</a><br> <!-- Added line break for compactness -->
+                <a href="#" class="text-blue-700 hover:text-blue-800">Download on the App Store</a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-4"> <!-- Reduced margin-top -->
+            &copy; 2025 ThaiAir. All Rights Reserved.
+        </div>
+    </div>
+  </footer>
+
+<!-- <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Seat Selection</h2>
+    <p class="mb-4 text-gray-600">
+      <strong>From:</strong> {{ flightDetails.from }}<br>
+      <strong>To:</strong> {{ flightDetails.to }}<br>
+      <strong>Date:</strong> {{ flightDetails.date }}<br>
+      <strong>Price:</strong> {{ flightDetails.price }}
+    </p>
+  
+    <h3 class="text-xl font-semibold mb-2">Choose Your Seat</h3>
+    <div class="grid grid-cols-4 gap-2">
+      <button class="bg-gray-200 px-4 py-2 rounded hover:bg-blue-700 hover:text-white">1A</button>
+      <button class="bg-gray-200 px-4 py-2 rounded hover:bg-blue-700 hover:text-white">1B</button>
+      <button class="bg-gray-200 px-4 py-2 rounded hover:bg-blue-700 hover:text-white">1C</button>
+      <button class="bg-gray-200 px-4 py-2 rounded hover:bg-blue-700 hover:text-white">1D</button>
+    
+    </div>
+  </div> -->
+  
