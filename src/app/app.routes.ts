@@ -21,5 +21,6 @@ export const routes: Routes = [
     {path: 'support', component:SupportComponent},
     {path: 'about', component:AboutUsComponent},
     {path: 'payment',component:PaymentComponent},
-     { path: '', component: HomeComponent}
+     { path: '', component: HomeComponent},
+     {path:'**',component: HomeComponent}
  ];
